@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>React Practice</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!--
+      INSTRUCTIONS:
+
+      We have created a functional Person component,
+      and a functional Team component.
+
+      The Team returns a collection of people.
+
+      1)  Add another Person tag to the return value of the Team component.
+      2)  Give this new person props that represent your name, age and mood.
+
+      Make sure you can see three people on the screen.
+    -->
+    <script type="text/babel">
+      const Person = (props) => {
+        return(
+          <div>
+            <h1>My name is {props.name}</h1>
+            <p>I am {props.age} years old</p>
+            <p>and today I am feeling {props.mood}</p>
+          </div>
+        )
+      }
+
+      const Team = () => {
+        // your code below...
+        return(
+          <div>
+            <h1>There should be 3 people on this screen</h1>
+            <Person name="Andy" age="36" mood="happy"/>
+            <Person name="Nick" age="??" mood="serene"/>
+            <Person name="Miguel" age="33" mood="sleepy"/>
+          </div>
+        )
+      }
+
+      ReactDOM.render(<Team/>, document.getElementById('root'))
+    </script>
+  </body>
+</html>
